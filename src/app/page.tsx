@@ -1,14 +1,20 @@
 import Link from "next/link";
 import styles from "./homepage.module.css";
+import { Featured } from "@/components/featured/Featured";
+import { CategoryList } from "@/components/categoryList/CategoryList";
+import { CardList } from "@/components/cardList/CardList";
+import { Menu } from "@/components/menu/Menu";
+
 
 export default function Home() {
-  return <div> 
-    <Link href={"/"}>Lorem asd asd asd asd asd Lorem ipsum dolor, sit amet consectetur 
-    adipisicing elit. Fugiat rem consectetur porro facilis autem suscipit impedit provident, 
-    molestiae magnam minima doloremque dolorem rerum esse assumenda harum! Modi reprehenderit
-     quidem ad!
-     weterwg afsdsad Lorem ipsum dolor sit amet consectetur adipisicing elit. Est voluptatum 
-     mollitia dolore consequatur architecto reprehenderit quibusdam earum accusamus amet 
-     natus eius dicta pariatur ipsa, obcaecati iure nobis eum? Corporis, earum?</Link>
-  </div>;
+  return (
+      <div className={styles.container}>
+        <Featured/>
+        <CategoryList/>
+        <div className={styles.content}>
+          <CardList/>
+          <Menu/>
+        </div>
+      </div>
+      )
 }
