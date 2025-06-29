@@ -20,7 +20,6 @@ export const Navbar = () => {
         <Link href="/"> Home</Link>
         <Link href="/"> Contact</Link>
         <Link href="/"> About</Link>
-        <Link href="/"> Login</Link>
         <AuthLinks/>
       </div> 
       
