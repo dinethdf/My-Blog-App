@@ -2,7 +2,19 @@ import Image from "next/image";
 import styles from "./card.module.css";
 import Link from "next/link";
 
-const Card = ({ key, item }) => {
+interface CardProps {
+  item: {
+    img?: string;
+    createdAt: string;
+    catSlug: string;
+    slug: string;
+    title: string;
+    desc: string;
+  };
+  key?: number;
+}
+
+const Card = ({ item, key }: CardProps) => {
   return (
     <div className={styles.container} key={key}>
       {item.img && (
