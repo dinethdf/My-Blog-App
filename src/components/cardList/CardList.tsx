@@ -6,7 +6,7 @@ import Card from "../card/Card";
 
 const getData = async (page:any, cat:any) => {
   const res = await fetch(
-    `http://localhost:3000/api/posts?page=${page}&cat=${cat || ""}`,
+    `${process.env.NEXTAUTH_URL}/api/posts?page=${page}&cat=${cat || ""}`,
     {
       cache: "no-store",
     }
@@ -28,7 +28,6 @@ const CardList = async ({ page, cat }: CardListProps) => {
   const { posts, count } = await getData(page, cat);
 
   const POST_PER_PAGE = 2;
-  console.log(posts, count)
   const hasPrev = POST_PER_PAGE * (page - 1) > 0;
   const hasNext = POST_PER_PAGE * (page - 1) + POST_PER_PAGE < count;
 
