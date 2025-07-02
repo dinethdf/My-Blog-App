@@ -3,7 +3,7 @@ import { prisma } from "@/prixma";
 import { NextResponse } from "next/server";
 
 // GET ALL COMMENTS OF A POST
-export const GET = async (req: { url: string | URL; }) => {
+export const GET = async (req: Request) => {
   const { searchParams } = new URL(req.url);
 
   const postSlug = searchParams.get("postSlug");
@@ -18,20 +18,21 @@ export const GET = async (req: { url: string | URL; }) => {
 
     return new NextResponse(JSON.stringify(comments), { status: 200 });
   } catch (err) {
-    // console.log(err);
     return new NextResponse(
-      JSON.stringify({ message: "Something went wrong!" }), { status: 500 }
+      JSON.stringify({ message: "Something went wrong!" }),
+      { status: 500 }
     );
   }
 };
 
 // CREATE A COMMENT
-export const POST = async (req: { json: () => any; }) => {
+export const POST = async (req: Request) => {
   const session = await getAuthSession();
 
   if (!session) {
     return new NextResponse(
-      JSON.stringify({ message: "Not Authenticated!" }), { status: 401 }
+      JSON.stringify({ message: "Not Authenticated!" }),
+      { status: 401 }
     );
   }
 
@@ -39,9 +40,11 @@ export const POST = async (req: { json: () => any; }) => {
     const body = await req.json();
     if (!session.user || !session.user.email) {
       return new NextResponse(
-        JSON.stringify({ message: "User information is missing!" }), { status: 400 }
+        JSON.stringify({ message: "User information is missing!" }),
+        { status: 400 }
       );
     }
+
     const comment = await prisma.comment.create({
       data: { ...body, userEmail: session.user.email },
     });
@@ -50,7 +53,8 @@ export const POST = async (req: { json: () => any; }) => {
   } catch (err) {
     console.log(err);
     return new NextResponse(
-      JSON.stringify({ message: "Something went wrong!" }), { status: 500 }
+      JSON.stringify({ message: "Something went wrong!" }),
+      { status: 500 }
     );
   }
 };

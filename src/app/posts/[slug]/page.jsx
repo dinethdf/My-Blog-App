@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Comments from '@/components/comments/Comments'
 
 
-  const getData = async (slug:any) => {
+  const getData = async (slug) => {
   const res = await fetch(`http://localhost:3000/api/posts/${slug}`, {
     cache: "no-store",
   });
@@ -17,13 +17,8 @@ import Comments from '@/components/comments/Comments'
 };
 
 
-interface SinglePageProps {
-  params: {
-    slug: string;
-  };
-}
 
-const SinglePage = async ({ params }: SinglePageProps) => {
+const SinglePage = async ({ params }) => {
 
 const { slug } = params;
 
