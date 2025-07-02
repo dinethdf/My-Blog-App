@@ -1,6 +1,6 @@
 // app/api/test-mongo/route.ts
 import { NextResponse } from "next/server";
-import { prisma } from "@/prixma"; // adjust path if needed
+import { prisma } from "@/lib/prixma"; // adjust path if needed
 
 export async function GET() {
   try {

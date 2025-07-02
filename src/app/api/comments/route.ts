@@ -1,5 +1,5 @@
 import { getAuthSession } from "@/utils/auth";
-import { prisma } from "@/prixma";
+import { prisma } from "@/lib/prixma";
 import { NextResponse } from "next/server";
 
 // GET ALL COMMENTS OF A POST

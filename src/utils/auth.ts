@@ -4,7 +4,7 @@ import GoogleProvider from "next-auth/providers/google";
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import { getServerSession } from "next-auth";
 
-import { prisma } from "@/prixma"; 
+import { prisma } from "@/lib/prixma"; 
 
 export const authOptions = {
  adapter: PrismaAdapter(prisma), 

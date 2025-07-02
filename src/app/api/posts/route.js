@@ -1,6 +1,6 @@
 import { getAuthSession } from "@/utils/auth";
 import { NextResponse } from "next/server";
-import { prisma } from '@/prixma';
+import { prisma } from '@/lib/prixma';
 
 export const GET = async (req) => {
   const { searchParams } = new URL(req.url);

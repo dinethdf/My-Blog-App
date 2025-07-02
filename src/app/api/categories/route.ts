@@ -1,4 +1,4 @@
-import {prisma} from "@/prixma";
+import {prisma} from "@/lib/prixma";
 import { NextResponse } from "next/server";
 
 export const GET = async () => {
