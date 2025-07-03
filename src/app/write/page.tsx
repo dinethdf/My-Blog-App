@@ -83,24 +83,21 @@ const WritePage = () => {
       .replace(/^-+|-+$/g, "");
 
   const handleSubmit = async () => {
+    const res = await fetch("/api/posts", {
+      method: "POST",
+      body: JSON.stringify({
+        title,
+        desc: value,
+        img: media,
+        slug: slugify(title),
+        catSlug: catSlug || "style", //If not selected, choose the general category
+      }),
+    });
 
-    console.log(value)
-
-    // const res = await fetch("/api/posts", {
-    //   method: "POST",
-    //   body: JSON.stringify({
-    //     title,
-    //     desc: value,
-    //     img: media,
-    //     slug: slugify(title),
-    //     catSlug: catSlug || "style", //If not selected, choose the general category
-    //   }),
-    // });
-
-    // if (res.status === 200) {
-    //   const data = await res.json();
-    //   router.push(`/posts/${data.slug}`);
-    // }
+    if (res.status === 200) {
+      const data = await res.json();
+      router.push(`/posts/${data.slug}`);
+    }
   };
 
   return (

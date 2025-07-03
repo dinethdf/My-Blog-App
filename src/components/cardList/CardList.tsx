@@ -6,7 +6,7 @@ import Card from "../card/Card";
 
 const getData = async (page:any, cat:any) => {
   const res = await fetch(
-    `${process.env.NEXTAUTH_URL}/api/posts?page=${page}`,
+    `${process.env.NEXTAUTH_URL}/api/posts?page=${page}&cat=${cat || ""}`,
     {
       cache: "no-store",
     }
