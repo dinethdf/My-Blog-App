@@ -6,22 +6,24 @@ const Featured = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>
-        <b>Hey, DDF dev here!</b> Discover my stories and creative ideas.
+        <b>Hey,</b> Discover my stories and creative ideas.
       </h1>
       <div className={styles.post}>
-        <div className={styles.imgContainer}>
-          <Image src="/p1.jpeg" alt="" fill className={styles.image} />
-        </div>
-        <div className={styles.textContainer}>
-          <h1 className={styles.postTitle}>Lorem ipsum dolor sit amet alim consectetur adipisicing elit.</h1>
+         <div className={styles.textContainer}>
+          <h1 className={styles.postTitle}>Hi I am Dineth Dilshan </h1>
           <p className={styles.postDesc}>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Cupiditate, quam nisi magni ea laborum inventore voluptatum
-            laudantium repellat ducimus unde aspernatur fuga. Quo, accusantium
-            quisquam! Harum unde sit culpa debitis.
+            Full-stack Developer, writer, and tech enthusiast from Sri Lanka.
+            I love building creative projects with React, exploring clean UI design,
+             and writing about the journey.  
+            This blog is my space to share tutorials, reflections, and personal projects that might inspire or help you.
           </p>
-          <button className={styles.button}>Read More</button>
+         
         </div>
+
+        <div className={styles.imgContainer}>
+          <Image src="/start.jpg" alt="" fill className={styles.image} />
+        </div>
+
       </div>
     </div>
   );
