@@ -8,14 +8,12 @@ import Menu from "@/components/menu/Menu";
 
 
 const BlogPage = ({ searchParams }: any) => {
-  const page = parseInt(searchParams?.page ?? "1") || 1;
-  const cat = searchParams?.cat ?? "";
+  const page = parseInt(searchParams?.page ?? "") || 1;
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>{cat ? `${cat} Blog` : "Blog"}</h1>
       <div className={styles.content}>
-        <CardList page={page} cat={cat} />
+        <CardList page={page} />
         <Menu />
       </div>
     </div>

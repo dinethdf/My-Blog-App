@@ -15,7 +15,7 @@ export default async function  Home ({ searchParams }: { searchParams?: any }) {
   return (
       <div className={styles.container}>
         <Featured/>
-        <CategoryList/>
+        {/* <CategoryList/> */}
         <div className={styles.content}>
           <CardList page={page} cat={undefined}/>
           <Menu/>

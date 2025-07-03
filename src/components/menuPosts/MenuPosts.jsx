@@ -13,13 +13,13 @@ const MenuPosts = ({ withImage }) => {
           </div>
         )}
         <div className={styles.textContainer}>
-          <span className={`${styles.category} ${styles.travel}`}>Travel</span>
+          <span className={`${styles.category} ${styles.travel}`}>coding</span>
           <h3 className={styles.postTitle}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Mastering React Components: A Beginner’s Guide
           </h3>
           <div className={styles.detail}>
-            <span className={styles.username}>John Doe</span>
-            <span className={styles.date}> - 10.03.2023</span>
+            <span className={styles.username}>DDF</span>
+            <span className={styles.date}> - 10.03.2025</span>
           </div>
         </div>
       </Link>
@@ -34,11 +34,11 @@ const MenuPosts = ({ withImage }) => {
             Culture
           </span>
           <h3 className={styles.postTitle}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+           Inside Culture: What It’s Like Working at Company
           </h3>
           <div className={styles.detail}>
-            <span className={styles.username}>John Doe</span>
-            <span className={styles.date}> - 10.03.2023</span>
+            <span className={styles.username}>culture</span>
+            <span className={styles.date}> - 10.04.2025</span>
           </div>
         </div>
       </Link>
@@ -49,13 +49,14 @@ const MenuPosts = ({ withImage }) => {
           </div>
         )}
         <div className={styles.textContainer}>
-          <span className={`${styles.category} ${styles.food}`}>Food</span>
+          <span className={`${styles.category} ${styles.food}`}>coding</span>
           <h3 className={styles.postTitle}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Why Learning JavaScript is Key to Frontend Success
+
           </h3>
           <div className={styles.detail}>
-            <span className={styles.username}>John Doe</span>
-            <span className={styles.date}> - 10.03.2023</span>
+            <span className={styles.username}>DDF</span>
+            <span className={styles.date}> - 10.05.2025</span>
           </div>
         </div>
       </Link>
@@ -67,14 +68,14 @@ const MenuPosts = ({ withImage }) => {
         )}
         <div className={styles.textContainer}>
           <span className={`${styles.category} ${styles.fashion}`}>
-            Fashion
+            coding
           </span>
           <h3 className={styles.postTitle}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Understanding useEffect in React
           </h3>
           <div className={styles.detail}>
-            <span className={styles.username}>John Doe</span>
-            <span className={styles.date}> - 10.03.2023</span>
+            <span className={styles.username}>DDF</span>
+            <span className={styles.date}> - 10.03.2025</span>
           </div>
         </div>
       </Link>
