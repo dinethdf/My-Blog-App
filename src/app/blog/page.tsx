@@ -8,7 +8,7 @@ import Menu from "@/components/menu/Menu";
 
 
 const BlogPage = ({ searchParams }: any) => {
-  const page = parseInt(searchParams?.page ?? "") || 1;
+  const page = parseInt(searchParams?.page ?? "1") || 1;
 
   return (
     <div className={styles.container}>
